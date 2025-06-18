@@ -16,7 +16,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 30px;
+  padding: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,7 +49,7 @@ header {
 }
 
 .navigation {
-  display: none;
+  display: flex;
   flex-direction: column;
   background: white;
   position: absolute;
@@ -101,7 +101,6 @@ header {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url('background.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -110,13 +109,18 @@ header {
   padding: 120px 30px 30px;
 }
 
+.home, .header, .content {
+  position: relative;
+  z-index: 1;
+}
+
 .content {
   max-width: 500px;
-  color: #555;
+  color: #FFF;
 }
 
 .content h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .content h2 span {
@@ -124,7 +128,7 @@ header {
 }
 
 .content h4 {
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 .content p {
@@ -141,11 +145,12 @@ header {
 .btn-group a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 40px;
+  padding: 8px 25px;
   background: #7d2ae8;
   border-radius: 10px;
   border: 2px solid #7d2ae8;
   font-weight: 500;
+  font-size: 0.9em;
   transition: 0.3s;
   text-align: center;
 }
@@ -245,13 +250,94 @@ header {
   }
 
   .btn-group a {
-    width: auto;
+    padding: 10px 40px;
+    font-size: 1em;
   }
 
   .social-icons {
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
-    margin-top: 0;
+    margin-top: 40px;
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
+}
+
+.gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #0e0e0e;
+}
+
+.gradients-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: url(#goo);
+}
+
+.gradients-container div {
+  position: absolute;
+  border-radius: 100%;
+  mix-blend-mode: screen;
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: move 20s infinite ease-in-out;
+}
+
+.g1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #7d2ae8, #3a0ca3);
+  top: 10%;
+  left: 10%;
+}
+
+.g2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #00f0ff, #3a0ca3);
+  top: 60%;
+  left: 25%;
+}
+
+.g3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #e91e63, #7d2ae8);
+  top: 30%;
+  right: 20%;
+}
+
+.g4 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #ff9800, #7d2ae8);
+  bottom: 20%;
+  left: 5%;
+}
+
+.g5 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #8bc34a, #3a0ca3);
+  bottom: 10%;
+  right: 10%;
+}
+
+.interactive {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffffff, #7d2ae8);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes move {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-50px) translateX(50px); }
 }
