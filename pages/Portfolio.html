@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Court's Portfolio</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="styles/portfolio.css" />
+</head>
+<body>
+  <header>
+    <h2 class="logo"><a href="/"><span>Court</span>.</a></h2>
+    <nav class="navigation">
+      <a href="/">Home</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/portfolio.html" class="active">Portfolio</a>
+      <a href="/pages/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="portfolio">
+    <h1 class="section-title">My Projects</h1>
+    <section class="project-feed">
+      <!-- Example Project Box -->
+      <div class="project-card" onclick="window.location.href='/pages/content/project1.html'">
+        <img src="/assets/images/project1-thumb.jpg" alt="Project 1 Thumbnail" />
+        <div class="project-info">
+          <h2>Spotify Dashboard (Sinatra)</h2>
+          <p>A full-stack music analysis web app built with FastAPI, React, and MongoDB.</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="window.location.href='/pages/content/project2.html'">
+        <img src="/assets/images/project2-thumb.jpg" alt="Project 2 Thumbnail" />
+        <div class="project-info">
+          <h2>Political Writing</h2>
+          <p>Editorial pieces exploring environmental politics, power, and justice.</p>
+        </div>
+      </div>
+
+      <!-- Add more project-cards below -->
+    </section>
+  </main>
+</body>
+</html>
