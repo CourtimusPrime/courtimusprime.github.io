@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "sinatra",
+    "title": "Sinatra",
+    "date": "2024–2025",
+    "subtitle": "A web app for building shareable Spotify music profiles",
+    "image": "../assets/Sinatra.png",
+    "summary": "A full-stack Spotify-linked web app that lets users build personalized music profiles, share taste insights, and visually explore their top genres, tracks, and playlists.",
+    "tech": ["FastAPI", "React", "MongoDB", "Spotify OAuth"],
+    "links": {
+      "site": "https://sinatra.live",
+      "frontend": "https://github.com/courtashdale/sinatra-frontend",
+      "backend": "https://github.com/courtashdale/sinatra-backend"
+    }
+  },
+  {
+    "slug": "pulse",
+    "title": "Pulse",
+    "date": "2023",
+    "subtitle": "An AI-assisted journaling app for mental health",
+    "image": "/assets/pulse.png",
+    "summary": "Pulse helps users reflect on their thoughts using natural language prompts and sentiment insights.",
+    "tech": ["Next.js", "Tailwind", "OpenAI API"],
+    "links": {
+      "site": "https://pulseapp.io",
+      "frontend": "https://github.com/courtashdale/pulse-frontend"
+    }
+  }
+]

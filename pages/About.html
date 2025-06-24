@@ -1,31 +1,31 @@
-<!-- /pages/About.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Court</title>
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="styles/about.css" /> <!-- Optional custom styles for About -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../styles/about.css" />
 </head>
 <body>
   <header>
-    <h2 class="logo"><span>Court</span>.</h2>
-    <button class="hamburger" onclick="ToggleMenu()" aria-label="Toggle navigation" aria-expanded="false";>
+    <a href="/index.html" class="logo">
+      <h2><span>Court</span>.</h2>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
       <i class="fas fa-bars"></i>
     </button>
     <nav class="navigation" id="navMenu">
       <a href="/index.html">Home</a>
       <a href="/pages/about.html" class="active">About</a>
-      <a href="/pages/portfolio.html" class="active">Portfolio</a>
-      <a href="/pages/contact.html" class="active">Contact</a>
+      <a href="/pages/portfolio.html">Portfolio</a>
     </nav>
-    <a href="/pages/contact.html" class="btn-talk">Let's Talk</a>
+    <a href="/pages/contact.html" class="btn-talk">Contact</a>
   </header>
 
   <main class="about">
     <section class="about-container">
-      <img src="https://via.placeholder.com/250" alt="Court Ash-Dale" class="profile-pic" />
+      <img src="../assets/Profile.jpeg" alt="Court Ash-Dale" class="profile-pic" />
       <div class="about-text">
         <h1>About Me</h1>
         <p>
@@ -37,6 +37,7 @@
       </div>
     </section>
   </main>
+
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navMenu');
