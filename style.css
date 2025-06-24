@@ -340,3 +340,29 @@ header {
   0%, 100% { transform: translateY(0) translateX(0); }
   50% { transform: translateY(-50px) translateX(50px); }
 }
+
+/* Contact page styles */
+.contact {
+  padding: 120px 30px;
+  text-align: center;
+}
+
+.contact-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-btn {
+  background: #7d2ae8;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: #5e20b5;
+ }

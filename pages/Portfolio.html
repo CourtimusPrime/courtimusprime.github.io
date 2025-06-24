@@ -3,43 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Court's Portfolio</title>
+  <title>Court Ash-Dale | Portfolio</title>
   <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="styles/portfolio.css" />
+  <script defer src="/bubbles.js"></script>
 </head>
 <body>
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+
   <header>
     <h2 class="logo"><a href="/"><span>Court</span>.</a></h2>
-    <nav class="navigation">
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="navigation" id="navMenu">
       <a href="/">Home</a>
-      <a href="/pages/about.html">About</a>
-      <a href="/pages/portfolio.html" class="active">Portfolio</a>
-      <a href="/pages/contact.html">Contact</a>
+      <a href="/pages/About.html">About</a>
+      <a href="/pages/Portfolio.html">Portfolio</a>
+      <a href="/pages/Contact.html">Contact</a>
     </nav>
+    <a href="/pages/Contact.html" class="btn-talk">Let's Talk</a>
   </header>
 
-  <main class="portfolio">
-    <h1 class="section-title">My Projects</h1>
-    <section class="project-feed">
-      <!-- Example Project Box -->
-      <div class="project-card" onclick="window.location.href='/pages/content/project1.html'">
-        <img src="/assets/images/project1-thumb.jpg" alt="Project 1 Thumbnail" />
-        <div class="project-info">
-          <h2>Spotify Dashboard (Sinatra)</h2>
-          <p>A full-stack music analysis web app built with FastAPI, React, and MongoDB.</p>
-        </div>
+  <main class="home">
+    <section class="content">
+      <h2>Hi, I'm <span>Court</span></h2>
+      <h4>Analyst and Developer</h4>
+      <p>[Insert brief description about yourself here.]</p>
+      <div class="btn-group">
+        <a href="/pages/About.html">About Me</a>
+        <a href="/pages/Portfolio.html">See Projects</a>
       </div>
-
-      <div class="project-card" onclick="window.location.href='/pages/content/project2.html'">
-        <img src="/assets/images/project2-thumb.jpg" alt="Project 2 Thumbnail" />
-        <div class="project-info">
-          <h2>Political Writing</h2>
-          <p>Editorial pieces exploring environmental politics, power, and justice.</p>
-        </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/courtashdale/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-medium"></i></a>
+        <a href="https://github.com/courtashdale" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
       </div>
-
-      <!-- Add more project-cards below -->
     </section>
   </main>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      const button = document.querySelector('.hamburger');
+      nav.classList.toggle('active');
+      const isActive = nav.classList.contains('active');
+      button.setAttribute('aria-expanded', isActive);
+    }
+  </script>
 </body>
 </html>
