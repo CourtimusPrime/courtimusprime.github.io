@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinatra – Court Ash-Dale</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/styles/project.css" />
+</head>
+<body>
+  <header>
+    <a href="/index.html" class="logo">
+        <h2><span>Court</span>.</h2>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="navigation" id="navMenu">
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html" class="active">About</a>
+      <a href="/pages/Portfolio.html">Portfolio</a>
+      <a href="/pages/Contact.html">Contact</a>
+    </nav>
+    <a href="/pages/Contact.html" class="btn-talk">Let's Talk</a>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero">
+      <img id="projectImage" class="project-image" />
+      <div class="project-meta">
+        <h1 id="projectTitle"></h1>
+        <span id="projectDate" class="project-date"></span>
+        <p id="projectSummary" class="project-summary"></p>
+      </div>
+    </section>
+
+    <section class="project-details">
+      <h2>What I Did</h2>
+      <ul id="projectTech"></ul>
+
+      <h2>Links</h2>
+      <div id="projectLinks" class="project-links"></div>
+    </section>
+  </main>
+  <script>
+    // Extract slug from URL
+    const slug = location.pathname.split('/').pop().replace('.html', '');
+
+    fetch('/data/projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const project = projects.find(p => p.slug === slug);
+        if (!project) return;
+
+        document.getElementById('projectImage').src = project.image;
+        document.getElementById('projectImage').alt = project.title + ' Preview';
+        document.getElementById('projectTitle').textContent = project.title;
+        document.getElementById('projectDate').textContent = project.date;
+        document.getElementById('projectSummary').textContent = project.summary;
+
+        // Fill tech list
+        const techList = document.getElementById('projectTech');
+        project.tech.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          techList.appendChild(li);
+        });
+
+        // Fill links
+        const linksDiv = document.getElementById('projectLinks');
+        if (project.links.site) {
+          linksDiv.innerHTML += `<a href="${project.links.site}" target="_blank">🌐 Visit Site</a>`;
+        }
+        if (project.links.frontend) {
+          linksDiv.innerHTML += `<a href="${project.links.frontend}" target="_blank">📁 Frontend Code</a>`;
+        }
+        if (project.links.backend) {
+          linksDiv.innerHTML += `<a href="${project.links.backend}" target="_blank">🧠 Backend Code</a>`;
+        }
+      });
+  </script>
+</body>
+</html>

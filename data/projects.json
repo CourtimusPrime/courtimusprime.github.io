@@ -4,7 +4,7 @@
     "title": "Sinatra",
     "date": "2024–2025",
     "subtitle": "A web app for building shareable Spotify music profiles",
-    "image": "../assets/Sinatra.png",
+    "image": "../assets/projects/Sinatra.png",
     "summary": "A full-stack Spotify-linked web app that lets users build personalized music profiles, share taste insights, and visually explore their top genres, tracks, and playlists.",
     "tech": ["FastAPI", "React", "MongoDB", "Spotify OAuth"],
     "links": {
@@ -14,12 +14,12 @@
     }
   },
   {
-    "slug": "pulse",
-    "title": "Pulse",
-    "date": "2023",
-    "subtitle": "An AI-assisted journaling app for mental health",
-    "image": "/assets/pulse.png",
-    "summary": "Pulse helps users reflect on their thoughts using natural language prompts and sentiment insights.",
+    "slug": "cartara",
+    "title": "Cartara",
+    "date": "2025",
+    "subtitle": "An AI-assisted visualizer of geopolitics and current events.",
+    "image": "/assets/projects/Cartara.jpg",
+    "summary": "Cartara is a map-based visualizer of geopolitics and current events that use modern APIs and LLMs to dynamically depict the world in action.",
     "tech": ["Next.js", "Tailwind", "OpenAI API"],
     "links": {
       "site": "https://pulseapp.io",

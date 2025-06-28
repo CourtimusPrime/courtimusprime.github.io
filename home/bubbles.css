@@ -22,14 +22,13 @@ html, body {
 }
 
 :root {
-  --color-bg1: rgb(108, 0, 162);
+  --color-bg1: rgb(139, 0, 0);
   --color-bg2: rgb(0, 17, 82);
-  --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
+  --color1: 125, 42, 232;
+  --color2: 0, 168, 255;
+  --color3: 255, 105, 180;
+  --color4: 255, 140, 0;
+  --color5: 255, 160, 0;
   --circle-size: 80%;
   --blending: hard-light;
 }
