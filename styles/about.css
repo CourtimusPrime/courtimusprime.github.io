@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #7d2ae8;
-  --background-color: #0a1f3d; /* dark navy */
-  --text-color: #ffffff;
-  --muted-text: #bbbbbb;
+  --primary-color: hsl(0,0%,100%);
+  --background-color: hsl(215,84%,24%);
+  --text-color: hsl(0,0%,100%);
+  --muted-text: hsl(0,0%,80%);
 }
 
 .about {

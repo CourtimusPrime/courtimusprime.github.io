@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #7d2ae8;
-  --background-color: #0a1f3d;
-  --text-color: #ffffff;
-  --muted-text: #bbbbbb;
+  --primary-color: hsl(0,0%,100%);
+  --background-color: hsl(215,84%,24%);
+  --text-color: hsl(0,0%,100%);
+  --muted-text: hsl(0,0%,80%);
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 
 .project-meta h1 {
   font-size: 2.5em;
-  color: var(--primary-color);
+  color: #fff;
 }
 
 .project-date {
@@ -59,6 +59,13 @@ body {
   color: var(--primary-color);
 }
 
+.project-description h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  padding-top: 20px;
+}
+
 .project-details ul {
   padding-left: 20px;
   margin-bottom: 40px;
@@ -71,14 +78,15 @@ body {
 
 .project-links a {
   display: inline-block;
-  background: var(--primary-color);
-  color: #fff;
+  background: transparent;
+  color: hsl(0,0%,100%);
+  border: 2px solid hsl(0,0%,100%);
   padding: 10px 20px;
   margin-right: 10px;
   margin-bottom: 10px;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .project-links a:hover {

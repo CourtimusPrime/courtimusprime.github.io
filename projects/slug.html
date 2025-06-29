@@ -17,7 +17,7 @@
       </button>
       <nav class="navigation" id="navMenu">
       <a href="/index.html">Home</a>
-      <a href="/pages/about.html" class="active">About</a>
+      <a href="/pages/About.html" class="active">About</a>
       <a href="/pages/Portfolio.html">Portfolio</a>
       <a href="/pages/Contact.html">Contact</a>
       </nav>
@@ -32,11 +32,12 @@
         <p id="projectSummary" class="project-summary"></p>
       </div>
     </section>
+    <section class="project-description">
+      <h2>The Sciency Bits</h2>
+      <p id="projectDescription" class="project-description">
+    </section>
 
     <section class="project-details">
-      <h2>What I Did</h2>
-      <ul id="projectTech"></ul>
-
       <h2>Links</h2>
       <div id="projectLinks" class="project-links"></div>
     </section>
@@ -56,25 +57,15 @@
         document.getElementById('projectTitle').textContent = project.title;
         document.getElementById('projectDate').textContent = project.date;
         document.getElementById('projectSummary').textContent = project.summary;
-
-        // Fill tech list
-        const techList = document.getElementById('projectTech');
-        project.tech.forEach(item => {
-          const li = document.createElement('li');
-          li.textContent = item;
-          techList.appendChild(li);
-        });
+        document.getElementById('projectDescription').textContent = project.description;
 
         // Fill links
         const linksDiv = document.getElementById('projectLinks');
         if (project.links.site) {
-          linksDiv.innerHTML += `<a href="${project.links.site}" target="_blank">🌐 Visit Site</a>`;
+          linksDiv.innerHTML += `<a href="${project.links.site}" target="_blank">🌐 Visit Sinatra</a>`;
         }
-        if (project.links.frontend) {
-          linksDiv.innerHTML += `<a href="${project.links.frontend}" target="_blank">📁 Frontend Code</a>`;
-        }
-        if (project.links.backend) {
-          linksDiv.innerHTML += `<a href="${project.links.backend}" target="_blank">🧠 Backend Code</a>`;
+        if (project.links.codebase) {
+          linksDiv.innerHTML += `<a href="${project.links.codebase}" target="_blank">👨‍💻 Github Project</a>`;
         }
       });
   </script>

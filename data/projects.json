@@ -5,7 +5,22 @@
     "date": "2024–2025",
     "subtitle": "A web app for building shareable Spotify music profiles",
     "image": "../assets/projects/Sinatra.png",
-    "summary": "A full-stack Spotify-linked web app that lets users build personalized music profiles, share taste insights, and visually explore their top genres, tracks, and playlists.",
+    "summary": "A web-app that lets Spotify users create public pages for their music taste.",
+    "description": "Sinatra was the first full-stack app I've developed. After being shown the ropes to online databases (MongoDB) and deployment servers (Google Console), Sinatra ran through five major iteratations. Sinatra went from a static JavaScript page to a dynamic FastAPI-JSX website.",
+    "tech": ["FastAPI", "React", "MongoDB", "Spotify OAuth"],
+    "links": {
+      "site": "https://sinatra.live",
+      "codebase": "https://github.com/courtashdale/sinatra"
+    }
+  },
+  {
+    "slug": "carbon-calculator",
+    "title": "Carbon Calculator",
+    "date": "2024",
+    "subtitle": "A JavaScript",
+    "image": "../assets/projects/Carbon.jpg",
+    "summary": "A web-app that lets Spotify users create public pages for their music taste.",
+    "description": "Sinatra was the first full-stack app I've developed. After being shown the ropes to online databases (MongoDB) and deployment servers (Google Console), Sinatra ran through five major iteratations. Sinatra went from a static JavaScript page to a dynamic FastAPI-JSX website.",
     "tech": ["FastAPI", "React", "MongoDB", "Spotify OAuth"],
     "links": {
       "site": "https://sinatra.live",
@@ -20,10 +35,25 @@
     "subtitle": "An AI-assisted visualizer of geopolitics and current events.",
     "image": "/assets/projects/Cartara.jpg",
     "summary": "Cartara is a map-based visualizer of geopolitics and current events that use modern APIs and LLMs to dynamically depict the world in action.",
+    "description": "",
     "tech": ["Next.js", "Tailwind", "OpenAI API"],
     "links": {
       "site": "https://pulseapp.io",
       "frontend": "https://github.com/courtashdale/pulse-frontend"
+    }
+  },
+  {
+    "slug": "comet",
+    "title": "Comet",
+    "date": "2017-2022",
+    "subtitle": "A JavaScript",
+    "image": "../assets/projects/Comet.jpg",
+    "summary": "A web-app that lets Spotify users create public pages for their music taste.",
+    "description": "Sinatra was the first full-stack app I've developed. After being shown the ropes to online databases (MongoDB) and deployment servers (Google Console), Sinatra ran through five major iteratations. Sinatra went from a static JavaScript page to a dynamic FastAPI-JSX website.",
+    "tech": ["FastAPI", "React", "MongoDB", "Spotify OAuth"],
+    "links": {
+      "site": "https://sinatra.live",
+      "project": "https://github.com/courtashdale/sinatra"
     }
   }
 ]
